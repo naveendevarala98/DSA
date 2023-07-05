@@ -7,7 +7,7 @@ public class SumN {
 		
 		int s = sumNatural(3);
 		System.out.println(s);
-
+		sumNaturalParam(3,0);
 	}
 	
 	static int sumNatural(int n) {
@@ -17,6 +17,16 @@ public class SumN {
 		
 		return n+sumNatural(n-1);
 		
+	}
+	
+static void sumNaturalParam(int i, int sum) {
+		
+		if(i<0) {
+			System.out.println(sum);
+			return ;
+			
+		}
+		sumNaturalParam(i-1,sum+i);
 	}
 
 }
