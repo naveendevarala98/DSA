@@ -20,6 +20,17 @@ public class LL {
 
     }
 
+    public void insertLast(int val){
+        if(tail == null){
+            insertFirst(val);
+            return ;
+        }
+        Node node = new Node(val);
+        tail.next=node;
+        tail=node;
+        size++;
+    }
+
     public void display(){
         Node temp = head;
         while(temp != null){
