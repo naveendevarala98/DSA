@@ -11,9 +11,9 @@ public class LL {
 
     public void insertFirst(int val){
         Node node = new Node(val);
-        node.next=head;
-        head=node;
-        if(tail == null){
+        node.next=head;//link already first(head) node to new first node
+        head=node; // new node is head now
+        if(tail == null){ // if only one is present then head and tail should be same
             tail = head;
         }
         size+=1;
@@ -45,8 +45,8 @@ public class LL {
         for(int i=1;i<index;i++){
             tmp = tmp.next;
         }
-        Node p = new Node(val, tmp.next);
-        tmp.next=p;
+        Node p = new Node(val, tmp.next); // new node links to right part
+        tmp.next=p; // left side to map with new node
         size++;
     }
 
