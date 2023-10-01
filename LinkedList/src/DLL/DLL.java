@@ -16,11 +16,19 @@ public class DLL {
 
     public void display(){
         Node tmp =head;
+        Node last = null;
         while(tmp != null){
             System.out.print(tmp.val+" -> ");
+            last=tmp;
             tmp = tmp.next;
         }
         System.out.println("END");
+        System.out.println(" Print Reverse ");
+        while(last != null){
+            System.out.print(last.val+" -> ");
+            last = last.prev;
+        }
+        System.out.println("START");
 
     }
 
