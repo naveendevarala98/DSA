@@ -59,7 +59,7 @@ public class BinarySearchTree {
         }
 
         int mid = (start+end)/2;
-        this.insert(mid);
+        this.insert(nums[mid]);
         this.sortedPopulate(nums,start,mid);
         this.sortedPopulate(nums,mid+1,end);
     }
